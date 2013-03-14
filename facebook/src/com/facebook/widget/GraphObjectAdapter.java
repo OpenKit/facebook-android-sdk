@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -23,9 +23,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
 import android.widget.*;
-import com.facebook.*;
-import com.facebook.android.R;
-import com.facebook.model.GraphObject;
+import io.openkit.facebook.*;
+import io.openkit.facebook.android.R;
+import io.openkit.facebook.model.GraphObject;
 import org.json.JSONObject;
 
 import java.net.MalformedURLException;

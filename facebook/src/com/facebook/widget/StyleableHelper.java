@@ -1,4 +1,4 @@
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import java.lang.reflect.Field;
 import android.content.Context;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.os.Bundle;
-import com.facebook.internal.Validate;
+import io.openkit.facebook.internal.Validate;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -44,40 +44,40 @@ public abstract class TokenCachingStrategy {
      * The key used by Session to store the token value in the Bundle during
      * load and save.
      */
-    public static final String TOKEN_KEY = "com.facebook.TokenCachingStrategy.Token";
+    public static final String TOKEN_KEY = "io.openkit.facebook.TokenCachingStrategy.Token";
 
     /**
      * The key used by Session to store the expiration date value in the Bundle
      * during load and save.
      */
-    public static final String EXPIRATION_DATE_KEY = "com.facebook.TokenCachingStrategy.ExpirationDate";
+    public static final String EXPIRATION_DATE_KEY = "io.openkit.facebook.TokenCachingStrategy.ExpirationDate";
 
     /**
      * The key used by Session to store the last refresh date value in the
      * Bundle during load and save.
      */
-    public static final String LAST_REFRESH_DATE_KEY = "com.facebook.TokenCachingStrategy.LastRefreshDate";
+    public static final String LAST_REFRESH_DATE_KEY = "io.openkit.facebook.TokenCachingStrategy.LastRefreshDate";
 
     /**
      * The key used by Session to store the user's id value in the Bundle during
      * load and save.
      */
-    public static final String USER_FBID_KEY = "com.facebook.TokenCachingStrategy.UserFBID";
+    public static final String USER_FBID_KEY = "io.openkit.facebook.TokenCachingStrategy.UserFBID";
 
     /**
      * The key used by Session to store an enum indicating the source of the token
      * in the Bundle during load and save.
      */
-    public static final String TOKEN_SOURCE_KEY = "com.facebook.TokenCachingStrategy.AccessTokenSource";
+    public static final String TOKEN_SOURCE_KEY = "io.openkit.facebook.TokenCachingStrategy.AccessTokenSource";
 
     /**
      * The key used by Session to store the list of permissions granted by the
      * token in the Bundle during load and save.
      */
-    public static final String PERMISSIONS_KEY = "com.facebook.TokenCachingStrategy.Permissions";
+    public static final String PERMISSIONS_KEY = "io.openkit.facebook.TokenCachingStrategy.Permissions";
 
     private static final long INVALID_BUNDLE_MILLISECONDS = Long.MIN_VALUE;
-    private static final String IS_SSO_KEY = "com.facebook.TokenCachingStrategy.IsSSO";
+    private static final String IS_SSO_KEY = "io.openkit.facebook.TokenCachingStrategy.IsSSO";
 
     /**
      * Called during Session construction to get the token state. Typically this

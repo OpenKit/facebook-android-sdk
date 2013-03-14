@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;

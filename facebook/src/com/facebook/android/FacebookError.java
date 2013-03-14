@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.android;
+package io.openkit.facebook.android;
 
 /**
  * Encapsulation of a Facebook Error: a Facebook request that could not be
@@ -24,7 +24,7 @@ package com.facebook.android;
  * <p/>
  * All public members of this class are intentionally deprecated.
  * New code should instead use
- * {@link com.facebook.FacebookException}
+ * {@link io.openkit.facebook.FacebookException}
  * <p/>
  * Adding @Deprecated to this class causes warnings in other deprecated classes
  * that reference this one.  That is the only reason this entire class is not

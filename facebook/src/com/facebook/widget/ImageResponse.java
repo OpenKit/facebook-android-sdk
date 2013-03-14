@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.graphics.Bitmap;
 

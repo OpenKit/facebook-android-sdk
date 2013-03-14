@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 /**
  * Specifies different categories of logging messages that can be generated.

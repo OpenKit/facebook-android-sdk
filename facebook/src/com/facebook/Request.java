@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.graphics.Bitmap;
 import android.location.Location;
@@ -24,11 +24,11 @@ import android.os.Handler;
 import android.os.ParcelFileDescriptor;
 import android.text.TextUtils;
 import android.util.Pair;
-import com.facebook.internal.ServerProtocol;
-import com.facebook.model.*;
-import com.facebook.internal.Logger;
-import com.facebook.internal.Utility;
-import com.facebook.internal.Validate;
+import io.openkit.facebook.internal.ServerProtocol;
+import io.openkit.facebook.model.*;
+import io.openkit.facebook.internal.Logger;
+import io.openkit.facebook.internal.Utility;
+import io.openkit.facebook.internal.Validate;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -1778,7 +1778,7 @@ public class Request {
 
     /**
      * Specifies the interface that consumers of
-     * {@link Request#executeMeRequestAsync(Session, com.facebook.Request.GraphUserCallback)}
+     * {@link Request#executeMeRequestAsync(Session, io.openkit.facebook.Request.GraphUserCallback)}
      * can use to be notified when the request completes, either successfully or with an error.
      */
     public interface GraphUserCallback {
@@ -1793,7 +1793,7 @@ public class Request {
 
     /**
      * Specifies the interface that consumers of
-     * {@link Request#executeMyFriendsRequestAsync(Session, com.facebook.Request.GraphUserListCallback)}
+     * {@link Request#executeMyFriendsRequestAsync(Session, io.openkit.facebook.Request.GraphUserListCallback)}
      * can use to be notified when the request completes, either successfully or with an error.
      */
     public interface GraphUserListCallback {
@@ -1808,7 +1808,7 @@ public class Request {
 
     /**
      * Specifies the interface that consumers of
-     * {@link Request#executePlacesSearchRequestAsync(Session, android.location.Location, int, int, String, com.facebook.Request.GraphPlaceListCallback)}
+     * {@link Request#executePlacesSearchRequestAsync(Session, android.location.Location, int, int, String, io.openkit.facebook.Request.GraphPlaceListCallback)}
      * can use to be notified when the request completes, either successfully or with an error.
      */
     public interface GraphPlaceListCallback {

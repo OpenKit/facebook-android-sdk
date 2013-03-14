@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -22,9 +22,9 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import com.facebook.*;
-import com.facebook.android.R;
-import com.facebook.model.GraphUser;
+import io.openkit.facebook.*;
+import io.openkit.facebook.android.R;
+import io.openkit.facebook.model.GraphUser;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -40,12 +40,12 @@ public class FriendPickerFragment extends PickerFragment<GraphUser> {
      * The key for a String parameter in the fragment's Intent bundle to indicate what user's
      * friends should be shown. The default is to display the currently authenticated user's friends.
      */
-    public static final String USER_ID_BUNDLE_KEY = "com.facebook.widget.FriendPickerFragment.UserId";
+    public static final String USER_ID_BUNDLE_KEY = "io.openkit.facebook.widget.FriendPickerFragment.UserId";
     /**
      * The key for a boolean parameter in the fragment's Intent bundle to indicate whether the
      * picker should allow more than one friend to be selected or not.
      */
-    public static final String MULTI_SELECT_BUNDLE_KEY = "com.facebook.widget.FriendPickerFragment.MultiSelect";
+    public static final String MULTI_SELECT_BUNDLE_KEY = "io.openkit.facebook.widget.FriendPickerFragment.MultiSelect";
 
     private static final String ID = "id";
     private static final String NAME = "name";

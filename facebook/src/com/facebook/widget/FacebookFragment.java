@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import com.facebook.Session;
-import com.facebook.SessionLoginBehavior;
-import com.facebook.SessionState;
-import com.facebook.internal.SessionAuthorizationType;
-import com.facebook.internal.SessionTracker;
+import io.openkit.facebook.Session;
+import io.openkit.facebook.SessionLoginBehavior;
+import io.openkit.facebook.SessionState;
+import io.openkit.facebook.internal.SessionAuthorizationType;
+import io.openkit.facebook.internal.SessionTracker;
 
 import java.util.Date;
 import java.util.List;

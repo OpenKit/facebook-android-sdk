@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.content.Context;
 import android.net.Uri;
-import com.facebook.internal.Validate;
+import io.openkit.facebook.internal.Validate;
 
 import java.net.MalformedURLException;
 import java.net.URL;

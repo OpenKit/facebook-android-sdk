@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -23,10 +23,10 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import com.facebook.android.BuildConfig;
-import com.facebook.internal.Utility;
-import com.facebook.model.GraphObject;
-import com.facebook.internal.Validate;
+import io.openkit.facebook.android.BuildConfig;
+import io.openkit.facebook.internal.Utility;
+import io.openkit.facebook.model.GraphObject;
+import io.openkit.facebook.internal.Validate;
 import org.json.JSONException;
 
 import java.lang.reflect.Field;
@@ -50,10 +50,10 @@ public final class Settings {
     private static final Object LOCK = new Object();
 
     private static final Uri ATTRIBUTION_ID_CONTENT_URI =
-            Uri.parse("content://com.facebook.katana.provider.AttributionIdProvider");
+            Uri.parse("content://io.openkit.facebook.katana.provider.AttributionIdProvider");
     private static final String ATTRIBUTION_ID_COLUMN_NAME = "aid";
 
-    private static final String ATTRIBUTION_PREFERENCES = "com.facebook.sdk.attributionTracking";
+    private static final String ATTRIBUTION_PREFERENCES = "io.openkit.facebook.sdk.attributionTracking";
     private static final String PUBLISH_ACTIVITY_PATH = "%s/activities";
     private static final String MOBILE_INSTALL_EVENT = "MOBILE_APP_INSTALL";
     private static final String SUPPORTS_ATTRIBUTION = "supports_attribution";

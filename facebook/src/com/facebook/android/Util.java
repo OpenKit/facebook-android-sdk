@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.facebook.android;
+package io.openkit.facebook.android;
 
 import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.os.Bundle;
-import com.facebook.internal.Utility;
+import io.openkit.facebook.internal.Utility;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -33,7 +33,7 @@ import java.net.*;
  * <p/>
  * All public members of this class are intentionally deprecated.
  * New code should instead use
- * {@link com.facebook.Request}
+ * {@link io.openkit.facebook.Request}
  * <p/>
  * Adding @Deprecated to this class causes warnings in other deprecated classes
  * that reference this one.  That is the only reason this entire class is not

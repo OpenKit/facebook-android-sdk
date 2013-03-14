@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 /**
  * Specifies the behaviors to try during
- * {@link Session#openForRead(com.facebook.Session.OpenRequest) openForRead},
- * {@link Session#openForPublish(com.facebook.Session.OpenRequest) openForPublish},
- * {@link Session#requestNewReadPermissions(com.facebook.Session.NewPermissionsRequest) requestNewReadPermissions}, or
- * {@link Session#requestNewPublishPermissions(com.facebook.Session.NewPermissionsRequest) requestNewPublishPermissions}.
+ * {@link Session#openForRead(io.openkit.facebook.Session.OpenRequest) openForRead},
+ * {@link Session#openForPublish(io.openkit.facebook.Session.OpenRequest) openForPublish},
+ * {@link Session#requestNewReadPermissions(io.openkit.facebook.Session.NewPermissionsRequest) requestNewReadPermissions}, or
+ * {@link Session#requestNewPublishPermissions(io.openkit.facebook.Session.NewPermissionsRequest) requestNewPublishPermissions}.
  */
 public enum SessionLoginBehavior {
     /**

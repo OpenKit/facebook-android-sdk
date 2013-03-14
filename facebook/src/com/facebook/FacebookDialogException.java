@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 /**
  * Represents an error condition relating to displaying a Facebook Web dialog.

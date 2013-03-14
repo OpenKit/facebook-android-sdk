@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.content.Context;
-import com.facebook.internal.FileLruCache;
-import com.facebook.internal.Utility;
+import io.openkit.facebook.internal.FileLruCache;
+import io.openkit.facebook.internal.Utility;
 
 import java.io.IOException;
 import java.io.InputStream;

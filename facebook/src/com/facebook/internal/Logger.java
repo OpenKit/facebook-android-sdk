@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.facebook.internal;
+package io.openkit.facebook.internal;
 
 import android.util.Log;
-import com.facebook.LoggingBehavior;
-import com.facebook.Settings;
+import io.openkit.facebook.LoggingBehavior;
+import io.openkit.facebook.Settings;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * com.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
+ * io.openkit.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
  * any of the classes in this package is unsupported, and they may be modified or removed without warning at
  * any time.
  */

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.app.Activity;
 import android.content.Context;
@@ -32,10 +32,10 @@ import android.view.ViewGroup;
 import android.view.ViewStub;
 import android.view.animation.AlphaAnimation;
 import android.widget.*;
-import com.facebook.*;
-import com.facebook.android.R;
-import com.facebook.model.GraphObject;
-import com.facebook.internal.SessionTracker;
+import io.openkit.facebook.*;
+import io.openkit.facebook.android.R;
+import io.openkit.facebook.model.GraphObject;
+import io.openkit.facebook.internal.SessionTracker;
 
 import java.util.*;
 
@@ -54,30 +54,30 @@ public abstract class PickerFragment<T extends GraphObject> extends Fragment {
      * The key for a boolean parameter in the fragment's Intent bundle to indicate whether the
      * picker should show pictures (if available) for the graph objects.
      */
-    public static final String SHOW_PICTURES_BUNDLE_KEY = "com.facebook.widget.PickerFragment.ShowPictures";
+    public static final String SHOW_PICTURES_BUNDLE_KEY = "io.openkit.facebook.widget.PickerFragment.ShowPictures";
     /**
      * The key for a String parameter in the fragment's Intent bundle to indicate which extra fields
      * beyond the default fields should be retrieved for any graph objects in the results.
      */
-    public static final String EXTRA_FIELDS_BUNDLE_KEY = "com.facebook.widget.PickerFragment.ExtraFields";
+    public static final String EXTRA_FIELDS_BUNDLE_KEY = "io.openkit.facebook.widget.PickerFragment.ExtraFields";
     /**
      * The key for a boolean parameter in the fragment's Intent bundle to indicate whether the
      * picker should display a title bar with a Done button.
      */
-    public static final String SHOW_TITLE_BAR_BUNDLE_KEY = "com.facebook.widget.PickerFragment.ShowTitleBar";
+    public static final String SHOW_TITLE_BAR_BUNDLE_KEY = "io.openkit.facebook.widget.PickerFragment.ShowTitleBar";
     /**
      * The key for a String parameter in the fragment's Intent bundle to indicate the text to
      * display in the title bar.
      */
-    public static final String TITLE_TEXT_BUNDLE_KEY = "com.facebook.widget.PickerFragment.TitleText";
+    public static final String TITLE_TEXT_BUNDLE_KEY = "io.openkit.facebook.widget.PickerFragment.TitleText";
     /**
      * The key for a String parameter in the fragment's Intent bundle to indicate the text to
      * display in the Done btuton.
      */
-    public static final String DONE_BUTTON_TEXT_BUNDLE_KEY = "com.facebook.widget.PickerFragment.DoneButtonText";
+    public static final String DONE_BUTTON_TEXT_BUNDLE_KEY = "io.openkit.facebook.widget.PickerFragment.DoneButtonText";
 
-    private static final String SELECTION_BUNDLE_KEY = "com.facebook.android.PickerFragment.Selection";
-    private static final String ACTIVITY_CIRCLE_SHOW_KEY = "com.facebook.android.PickerFragment.ActivityCircleShown";
+    private static final String SELECTION_BUNDLE_KEY = "io.openkit.facebook.android.PickerFragment.Selection";
+    private static final String ACTIVITY_CIRCLE_SHOW_KEY = "io.openkit.facebook.android.PickerFragment.ActivityCircleShown";
     private static final int PROFILE_PICTURE_PREFETCH_BUFFER = 5;
 
     private final int layout;

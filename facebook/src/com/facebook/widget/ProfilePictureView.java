@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -27,10 +27,10 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import com.facebook.FacebookException;
-import com.facebook.LoggingBehavior;
-import com.facebook.internal.Logger;
-import com.facebook.internal.Utility;
+import io.openkit.facebook.FacebookException;
+import io.openkit.facebook.LoggingBehavior;
+import io.openkit.facebook.internal.Logger;
+import io.openkit.facebook.internal.Utility;
 
 import java.net.MalformedURLException;
 

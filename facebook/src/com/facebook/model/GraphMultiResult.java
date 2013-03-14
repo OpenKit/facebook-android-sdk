@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.model;
+package io.openkit.facebook.model;
 
 /**
  * Defines a GraphObject that represents the result of a query that returns multiple GraphObjects

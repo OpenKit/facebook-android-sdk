@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import com.facebook.internal.Logger;
-import com.facebook.internal.Utility;
-import com.facebook.internal.Validate;
+import io.openkit.facebook.internal.Logger;
+import io.openkit.facebook.internal.Utility;
+import io.openkit.facebook.internal.Validate;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,7 +45,7 @@ import java.util.Map;
  */
 public class SharedPreferencesTokenCachingStrategy extends TokenCachingStrategy {
 
-    private static final String DEFAULT_CACHE_KEY = "com.facebook.SharedPreferencesTokenCachingStrategy.DEFAULT_KEY";
+    private static final String DEFAULT_CACHE_KEY = "io.openkit.facebook.SharedPreferencesTokenCachingStrategy.DEFAULT_KEY";
     private static final String TAG = SharedPreferencesTokenCachingStrategy.class.getSimpleName();
 
     private static final String JSON_VALUE_TYPE = "valueType";

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 /**
- * Represents an error specific to the {@link com.facebook.model.GraphObject GraphObject} class.
+ * Represents an error specific to the {@link io.openkit.facebook.model.GraphObject GraphObject} class.
  */
 public class FacebookGraphObjectException extends FacebookException {
     static final long serialVersionUID = 1;

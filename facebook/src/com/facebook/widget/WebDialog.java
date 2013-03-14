@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -37,12 +37,12 @@ import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import com.facebook.*;
-import com.facebook.android.*;
-import com.facebook.internal.Logger;
-import com.facebook.internal.ServerProtocol;
-import com.facebook.internal.Utility;
-import com.facebook.internal.Validate;
+import io.openkit.facebook.*;
+import io.openkit.facebook.android.*;
+import io.openkit.facebook.internal.Logger;
+import io.openkit.facebook.internal.ServerProtocol;
+import io.openkit.facebook.internal.Utility;
+import io.openkit.facebook.internal.Validate;
 
 /**
  * This class provides a mechanism for displaying Facebook Web dialogs inside a Dialog. Helper

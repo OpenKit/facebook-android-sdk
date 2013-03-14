@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.os.Handler;
 
@@ -191,7 +191,7 @@ public class RequestBatch extends AbstractList<Request> {
      * Executes this batch asynchronously. This function will return immediately, and the batch will
      * be processed on a separate thread. In order to process results of a request, or determine
      * whether a request succeeded or failed, a callback must be specified (see
-     * {@link Request#setCallback(com.facebook.Request.Callback)})
+     * {@link Request#setCallback(io.openkit.facebook.Request.Callback)})
      * <p/>
      * This should only be called from the UI thread.
      *

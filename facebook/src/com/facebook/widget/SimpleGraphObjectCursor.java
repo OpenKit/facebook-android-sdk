@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.database.CursorIndexOutOfBoundsException;
-import com.facebook.model.GraphObject;
+import io.openkit.facebook.model.GraphObject;
 
 import java.util.ArrayList;
 import java.util.Collection;

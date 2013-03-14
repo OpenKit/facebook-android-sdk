@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.facebook.model;
+package io.openkit.facebook.model;
 
-import com.facebook.FacebookGraphObjectException;
-import com.facebook.internal.Utility;
-import com.facebook.internal.Validate;
+import io.openkit.facebook.FacebookGraphObjectException;
+import io.openkit.facebook.internal.Utility;
+import io.openkit.facebook.internal.Validate;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,7 +32,7 @@ import java.util.*;
  * GraphObject is the primary interface used by the Facebook SDK for Android to represent objects in the Facebook
  * Social Graph and the Facebook Open Graph (OG). It is the base interface for all typed access to graph objects
  * in the SDK. No concrete classes implement GraphObject or its derived interfaces. Rather, they are implemented as
- * proxies (see the {@link com.facebook.model.GraphObject.Factory Factory} class) that provide strongly-typed property
+ * proxies (see the {@link io.openkit.facebook.model.GraphObject.Factory Factory} class) that provide strongly-typed property
  * getters and setters to access the underlying data. Since the primary use case for graph objects is sending and
  * receiving them over the wire to/from Facebook services, they are represented as JSONObjects. No validation is done
  * that a graph object is actually of a specific type -- any graph object can be treated as any GraphObject-derived
@@ -103,7 +103,7 @@ public interface GraphObject {
          * @param json the JSONObject containing the data to be exposed
          * @return a GraphObject that represents the underlying data
          *
-         * @throws com.facebook.FacebookException
+         * @throws io.openkit.facebook.FacebookException
          *            If the passed in Class is not a valid GraphObject interface
          */
         public static GraphObject create(JSONObject json) {
@@ -116,7 +116,7 @@ public interface GraphObject {
          * @param graphObjectClass the GraphObject-derived type to return
          * @return a graphObjectClass that represents the underlying data
          *
-         * @throws com.facebook.FacebookException
+         * @throws io.openkit.facebook.FacebookException
          *            If the passed in Class is not a valid GraphObject interface
          */
         public static <T extends GraphObject> T create(JSONObject json, Class<T> graphObjectClass) {
@@ -127,7 +127,7 @@ public interface GraphObject {
          * Creates a GraphObject proxy that initially contains no data.
          * @return a GraphObject with no data
          *
-         * @throws com.facebook.FacebookException
+         * @throws io.openkit.facebook.FacebookException
          *            If the passed in Class is not a valid GraphObject interface
          */
         public static GraphObject create() {
@@ -139,7 +139,7 @@ public interface GraphObject {
          * @param graphObjectClass the GraphObject-derived type to return
          * @return a graphObjectClass with no data
          *
-         * @throws com.facebook.FacebookException
+         * @throws io.openkit.facebook.FacebookException
          *            If the passed in Class is not a valid GraphObject interface
          */
         public static <T extends GraphObject> T create(Class<T> graphObjectClass) {
@@ -173,7 +173,7 @@ public interface GraphObject {
          * @param graphObjectClass the GraphObject-derived type to return
          * @return a graphObjectClass that represents the underlying data
          *
-         * @throws com.facebook.FacebookException
+         * @throws io.openkit.facebook.FacebookException
          *            If the passed in Class is not a valid GraphObject interface
          */
         public static <T> GraphObjectList<T> createList(JSONArray array, Class<T> graphObjectClass) {
@@ -185,7 +185,7 @@ public interface GraphObject {
          * @param graphObjectClass the GraphObject-derived type to return
          * @return a GraphObjectList with no data
          *
-         * @throws com.facebook.FacebookException
+         * @throws io.openkit.facebook.FacebookException
          *            If the passed in Class is not a valid GraphObject interface
          */
         public static <T> GraphObjectList<T> createList(Class<T> graphObjectClass) {

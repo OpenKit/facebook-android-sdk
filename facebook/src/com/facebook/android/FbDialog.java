@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.facebook.android;
+package io.openkit.facebook.android;
 
 import android.content.Context;
 import android.os.Bundle;
-import com.facebook.*;
-import com.facebook.android.Facebook.DialogListener;
-import com.facebook.widget.WebDialog;
+import io.openkit.facebook.*;
+import io.openkit.facebook.android.Facebook.DialogListener;
+import io.openkit.facebook.widget.WebDialog;
 
 /**
- * This class is deprecated. See {@link com.facebook.widget.WebDialog}.
+ * This class is deprecated. See {@link io.openkit.facebook.widget.WebDialog}.
  */
 @Deprecated
 public class FbDialog extends WebDialog {

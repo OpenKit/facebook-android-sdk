@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
-import com.facebook.Settings;
+import io.openkit.facebook.Settings;
 
 import java.util.concurrent.Executor;
 

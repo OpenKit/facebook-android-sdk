@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
-import com.facebook.android.R;
-import com.facebook.internal.Utility;
+import io.openkit.facebook.android.R;
+import io.openkit.facebook.internal.Utility;
 import org.json.JSONException;
 import org.json.JSONObject;
 

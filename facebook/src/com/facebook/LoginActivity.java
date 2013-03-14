@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -27,7 +27,7 @@ import android.view.View;
  * AndroidManifest.xml to ensure proper handling of Facebook login.
  * <pre>
  * {@code
- * <activity android:name="com.facebook.LoginActivity"
+ * <activity android:name="io.openkit.facebook.LoginActivity"
  *           android:theme="@android:style/Theme.Translucent.NoTitleBar"
  *           android:label="@string/app_name" />
  * }
@@ -35,7 +35,7 @@ import android.view.View;
  * Do not start this activity directly.
  */
 public class LoginActivity extends Activity {
-    static final String RESULT_KEY = "com.facebook.LoginActivity:Result";
+    static final String RESULT_KEY = "io.openkit.facebook.LoginActivity:Result";
 
     private static final String NULL_CALLING_PKG_ERROR_MSG =
             "Cannot call LoginActivity with a null calling package. " +

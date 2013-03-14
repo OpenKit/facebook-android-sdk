@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.internal;
+package io.openkit.facebook.internal;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -26,9 +26,9 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
-import com.facebook.FacebookException;
-import com.facebook.Session;
-import com.facebook.android.BuildConfig;
+import io.openkit.facebook.FacebookException;
+import io.openkit.facebook.Session;
+import io.openkit.facebook.android.BuildConfig;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,7 +42,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 /**
- * com.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
+ * io.openkit.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
  * any of the classes in this package is unsupported, and they may be modified or removed without warning at
  * any time.
  */

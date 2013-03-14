@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.content.Context;
 import android.os.Handler;
 import android.support.v4.content.Loader;
-import com.facebook.*;
-import com.facebook.model.GraphObject;
-import com.facebook.model.GraphObjectList;
-import com.facebook.internal.CacheableRequestBatch;
+import io.openkit.facebook.*;
+import io.openkit.facebook.model.GraphObject;
+import io.openkit.facebook.model.GraphObjectList;
+import io.openkit.facebook.internal.CacheableRequestBatch;
 
 class GraphObjectPagingLoader<T extends GraphObject> extends Loader<SimpleGraphObjectCursor<T>> {
     private final Class<T> graphObjectClass;

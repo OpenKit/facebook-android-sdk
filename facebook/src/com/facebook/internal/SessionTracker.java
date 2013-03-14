@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.facebook.internal;
+package io.openkit.facebook.internal;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.v4.content.LocalBroadcastManager;
-import com.facebook.Session;
-import com.facebook.SessionState;
+import io.openkit.facebook.Session;
+import io.openkit.facebook.SessionState;
 
 /**
- * com.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
+ * io.openkit.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
  * any of the classes in this package is unsupported, and they may be modified or removed without warning at
  * any time.
  */

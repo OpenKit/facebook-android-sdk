@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.model;
+package io.openkit.facebook.model;
 
 /**
  * Provides a strongly-typed representation of a Place as defined by the Graph API.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -25,9 +25,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.facebook.*;
-import com.facebook.android.R;
-import com.facebook.model.GraphUser;
+import io.openkit.facebook.*;
+import io.openkit.facebook.android.R;
+import io.openkit.facebook.model.GraphUser;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -40,9 +40,9 @@ import java.util.List;
  * This Fragment will create and use the active session upon construction
  * if it has the available data (if the app ID is specified in the manifest).
  * It will also open the active session if it does not require user interaction
- * (i.e. if the session is in the {@link com.facebook.SessionState#CREATED_TOKEN_LOADED} state.
+ * (i.e. if the session is in the {@link io.openkit.facebook.SessionState#CREATED_TOKEN_LOADED} state.
  * Developers can override the use of the active session by calling
- * the {@link #setSession(com.facebook.Session)} method.
+ * the {@link #setSession(io.openkit.facebook.Session)} method.
  */
 public class UserSettingsFragment extends FacebookFragment {
 
@@ -90,7 +90,7 @@ public class UserSettingsFragment extends FacebookFragment {
     }
 
     /**
-     * @throws com.facebook.FacebookException if errors occur during the loading of user information
+     * @throws io.openkit.facebook.FacebookException if errors occur during the loading of user information
      */
     @Override
     public void onResume() {
@@ -108,7 +108,7 @@ public class UserSettingsFragment extends FacebookFragment {
      * load some user information for display (if needed).
      *
      * @param newSession the Session object to use
-     * @throws com.facebook.FacebookException if errors occur during the loading of user information
+     * @throws io.openkit.facebook.FacebookException if errors occur during the loading of user information
      */
     @Override
     public void setSession(Session newSession) {

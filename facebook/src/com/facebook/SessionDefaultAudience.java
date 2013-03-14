@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 /**
  * Certain operations such as publishing a status or publishing a photo require an audience. When the user

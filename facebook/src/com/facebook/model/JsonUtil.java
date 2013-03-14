@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.model;
+package io.openkit.facebook.model;
 
 import android.annotation.SuppressLint;
 import org.json.JSONException;

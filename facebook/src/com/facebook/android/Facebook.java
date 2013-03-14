@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.android;
+package io.openkit.facebook.android;
 
 import android.Manifest;
 import android.app.Activity;
@@ -26,8 +26,8 @@ import android.content.pm.ResolveInfo;
 import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.*;
-import com.facebook.*;
-import com.facebook.Session.StatusCallback;
+import io.openkit.facebook.*;
+import io.openkit.facebook.Session.StatusCallback;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -44,7 +44,7 @@ import java.util.List;
  * New code should instead use
  * {@link Session} to manage session state,
  * {@link Request} to make API requests, and
- * {@link com.facebook.widget.WebDialog} to make dialog requests.
+ * {@link io.openkit.facebook.widget.WebDialog} to make dialog requests.
  * <p/>
  * Adding @Deprecated to this class causes warnings in other deprecated classes
  * that reference this one.  That is the only reason this entire class is not
@@ -68,7 +68,7 @@ public class Facebook {
 
     @Deprecated
     public static final Uri ATTRIBUTION_ID_CONTENT_URI =
-        Uri.parse("content://com.facebook.katana.provider.AttributionIdProvider");
+        Uri.parse("content://io.openkit.facebook.katana.provider.AttributionIdProvider");
     @Deprecated
     public static final String ATTRIBUTION_ID_COLUMN_NAME = "aid";
 
@@ -458,10 +458,10 @@ public class Facebook {
         checkUserSession("extendAccessToken");
         Intent intent = new Intent();
 
-        intent.setClassName("com.facebook.katana", "com.facebook.katana.platform.TokenRefreshService");
+        intent.setClassName("io.openkit.facebook.katana", "io.openkit.facebook.katana.platform.TokenRefreshService");
 
         // Verify that the application whose package name is
-        // com.facebook.katana
+        // io.openkit.facebook.katana
         // has the expected FB app signature.
         if (!validateServiceIntent(context, intent)) {
             return false;
@@ -812,7 +812,7 @@ public class Facebook {
      * Note that this method is asynchronous and the callback will be invoked in
      * the original calling thread (not in a background thread).
      *
-     * This method is deprecated. See {@link com.facebook.widget.WebDialog}.
+     * This method is deprecated. See {@link io.openkit.facebook.widget.WebDialog}.
      *
      * @param context
      *            The Android context in which we will generate this dialog.
@@ -835,7 +835,7 @@ public class Facebook {
      * Note that this method is asynchronous and the callback will be invoked in
      * the original calling thread (not in a background thread).
      *
-     * This method is deprecated. See {@link com.facebook.widget.WebDialog}.
+     * This method is deprecated. See {@link io.openkit.facebook.widget.WebDialog}.
      * 
      * @param context
      *            The Android context in which we will generate this dialog.
@@ -1248,7 +1248,7 @@ public class Facebook {
      * <p/>
      * All public members of this class are intentionally deprecated.
      * New code should instead use
-     * {@link com.facebook.widget.WebDialog}
+     * {@link io.openkit.facebook.widget.WebDialog}
      * <p/>
      * Adding @Deprecated to this class causes warnings in other deprecated classes
      * that reference this one.  That is the only reason this entire class is not

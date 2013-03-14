@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.model;
+package io.openkit.facebook.model;
 
 import org.json.JSONArray;
 
@@ -22,7 +22,7 @@ import java.util.List;
 
 /**
  * GraphObjectList is the primary representation of a collection of graph objects in the Facebook SDK for Android.
- * It is not implemented by any concrete classes, but rather by a proxy (see the {@link com.facebook.model.GraphObject.Factory Factory}
+ * It is not implemented by any concrete classes, but rather by a proxy (see the {@link io.openkit.facebook.model.GraphObject.Factory Factory}
  * class). A GraphObjectList can actually contain elements of any type, not just graph objects, but its principal
  * use in the SDK is to contain types derived from GraphObject.
  * <br/>
@@ -36,7 +36,7 @@ public interface GraphObjectList<T> extends List<T> {
      * GraphObject-derived type.
      * @param graphObjectClass the GraphObject-derived type to return a list of
      * @return a list representing the same underlying data, exposed as the new GraphObject-derived type
-     * @throws com.facebook.FacebookGraphObjectException if T does not derive from GraphObject
+     * @throws io.openkit.facebook.FacebookGraphObjectException if T does not derive from GraphObject
      */
     public <U extends GraphObject> GraphObjectList<U> castToListOf(Class<U> graphObjectClass);
     /**

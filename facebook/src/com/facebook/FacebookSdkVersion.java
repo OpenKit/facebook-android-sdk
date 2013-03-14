@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 final class FacebookSdkVersion {
     public static final String BUILD = "3.0.0";

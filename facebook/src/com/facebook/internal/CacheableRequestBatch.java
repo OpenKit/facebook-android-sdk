@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.facebook.internal;
+package io.openkit.facebook.internal;
 
-import com.facebook.Request;
-import com.facebook.RequestBatch;
+import io.openkit.facebook.Request;
+import io.openkit.facebook.RequestBatch;
 
 /**
- * com.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
+ * io.openkit.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
  * any of the classes in this package is unsupported, and they may be modified or removed without warning at
  * any time.
  */

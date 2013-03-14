@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.facebook.internal.Utility;
-import com.facebook.internal.Validate;
+import io.openkit.facebook.internal.Utility;
+import io.openkit.facebook.internal.Validate;
 
 import java.io.InvalidObjectException;
 import java.io.ObjectInputStream;

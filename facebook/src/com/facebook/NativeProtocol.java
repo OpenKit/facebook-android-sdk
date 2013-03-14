@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.content.Context;
 import android.content.Intent;
@@ -24,15 +24,15 @@ import android.content.pm.ResolveInfo;
 import android.content.pm.Signature;
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.facebook.internal.Utility;
+import io.openkit.facebook.internal.Utility;
 
 import java.util.ArrayList;
 import java.util.List;
 
 final class NativeProtocol {
-    static final String KATANA_PACKAGE = "com.facebook.katana";
-    static final String KATANA_PROXY_AUTH_ACTIVITY = "com.facebook.katana.ProxyAuth";
-    static final String KATANA_TOKEN_REFRESH_ACTIVITY = "com.facebook.katana.platform.TokenRefreshService";
+    static final String KATANA_PACKAGE = "io.openkit.facebook.katana";
+    static final String KATANA_PROXY_AUTH_ACTIVITY = "io.openkit.facebook.katana.ProxyAuth";
+    static final String KATANA_TOKEN_REFRESH_ACTIVITY = "io.openkit.facebook.katana.platform.TokenRefreshService";
     static final String KATANA_SIGNATURE =
             "30820268308201d102044a9c4610300d06092a864886f70d0101040500307a310"
                     + "b3009060355040613025553310b30090603550408130243413112301006035504"
@@ -132,12 +132,12 @@ final class NativeProtocol {
     // ---------------------------------------------------------------------------------------------
     // Native Protocol updated 2012-11
 
-    static final String INTENT_ACTION_PLATFORM_ACTIVITY = "com.facebook.platform.PLATFORM_ACTIVITY";
-    static final String INTENT_ACTION_PLATFORM_SERVICE = "com.facebook.platform.PLATFORM_SERVICE";
+    static final String INTENT_ACTION_PLATFORM_ACTIVITY = "io.openkit.facebook.platform.PLATFORM_ACTIVITY";
+    static final String INTENT_ACTION_PLATFORM_SERVICE = "io.openkit.facebook.platform.PLATFORM_SERVICE";
 
     static final int PROTOCOL_VERSION_20121101 = 20121101;
-    static final String EXTRA_PROTOCOL_VERSION = "com.facebook.platform.protocol.PROTOCOL_VERSION";
-    static final String EXTRA_PROTOCOL_ACTION = "com.facebook.platform.protocol.PROTOCOL_ACTION";
+    static final String EXTRA_PROTOCOL_VERSION = "io.openkit.facebook.platform.protocol.PROTOCOL_VERSION";
+    static final String EXTRA_PROTOCOL_ACTION = "io.openkit.facebook.platform.protocol.PROTOCOL_ACTION";
 
     // Messages supported by PlatformService:
     static final int MESSAGE_GET_ACCESS_TOKEN_REQUEST = 0x10000;
@@ -155,31 +155,31 @@ final class NativeProtocol {
     // EXTRA_PERMISSIONS
 
     // Values of EXTRA_PROTOCOL_ACTION supported by PlatformActivity:
-    static final String ACTION_LOGIN_DIALOG = "com.facebook.platform.action.request.LOGIN_DIALOG";
+    static final String ACTION_LOGIN_DIALOG = "io.openkit.facebook.platform.action.request.LOGIN_DIALOG";
 
     // Values of EXTRA_PROTOCOL_ACTION values returned by PlatformActivity:
     static final String ACTION_LOGIN_DIALOG_REPLY =
-            "com.facebook.platform.action.reply.LOGIN_DIALOG";
+            "io.openkit.facebook.platform.action.reply.LOGIN_DIALOG";
 
     // Extras supported for ACTION_LOGIN_DIALOG:
-    static final String EXTRA_PERMISSIONS = "com.facebook.platform.extra.PERMISSIONS";
-    static final String EXTRA_WRITE_PRIVACY = "com.facebook.platform.extra.WRITE_PRIVACY";
-    static final String EXTRA_APPLICATION_ID = "com.facebook.platform.extra.APPLICATION_ID";
+    static final String EXTRA_PERMISSIONS = "io.openkit.facebook.platform.extra.PERMISSIONS";
+    static final String EXTRA_WRITE_PRIVACY = "io.openkit.facebook.platform.extra.WRITE_PRIVACY";
+    static final String EXTRA_APPLICATION_ID = "io.openkit.facebook.platform.extra.APPLICATION_ID";
 
     // Extras returned by setResult() for ACTION_LOGIN_DIALOG
-    static final String EXTRA_ACCESS_TOKEN = "com.facebook.platform.extra.ACCESS_TOKEN";
+    static final String EXTRA_ACCESS_TOKEN = "io.openkit.facebook.platform.extra.ACCESS_TOKEN";
     static final String EXTRA_EXPIRES_SECONDS_SINCE_EPOCH =
-            "com.facebook.platform.extra.EXPIRES_SECONDS_SINCE_EPOCH";
+            "io.openkit.facebook.platform.extra.EXPIRES_SECONDS_SINCE_EPOCH";
     // EXTRA_PERMISSIONS
 
     // Keys for status data in MESSAGE_ERROR_REPLY from PlatformService and for error
     // extras returned by PlatformActivity's setResult() in case of errors:
-    static final String STATUS_ERROR_TYPE = "com.facebook.platform.status.ERROR_TYPE";
+    static final String STATUS_ERROR_TYPE = "io.openkit.facebook.platform.status.ERROR_TYPE";
     static final String STATUS_ERROR_DESCRIPTION =
-            "com.facebook.platform.status.ERROR_DESCRIPTION";
-    static final String STATUS_ERROR_CODE = "com.facebook.platform.status.ERROR_CODE";
-    static final String STATUS_ERROR_SUBCODE = "com.facebook.platform.status.ERROR_SUBCODE";
-    static final String STATUS_ERROR_JSON = "com.facebook.platform.status.ERROR_JSON";
+            "io.openkit.facebook.platform.status.ERROR_DESCRIPTION";
+    static final String STATUS_ERROR_CODE = "io.openkit.facebook.platform.status.ERROR_CODE";
+    static final String STATUS_ERROR_SUBCODE = "io.openkit.facebook.platform.status.ERROR_SUBCODE";
+    static final String STATUS_ERROR_JSON = "io.openkit.facebook.platform.status.ERROR_JSON";
 
     // Expected values for ERROR_KEY_TYPE.  Clients should tolerate other values:
     static final String ERROR_UNKNOWN_ERROR = "UnknownError";

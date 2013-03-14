@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
-import com.facebook.model.GraphObject;
+import io.openkit.facebook.model.GraphObject;
 
 interface GraphObjectCursor<T extends GraphObject> {
     boolean isFromCache();

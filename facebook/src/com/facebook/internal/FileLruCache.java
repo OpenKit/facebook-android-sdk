@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.facebook.internal;
+package io.openkit.facebook.internal;
 
 import android.content.Context;
 import android.util.Log;
-import com.facebook.LoggingBehavior;
-import com.facebook.Settings;
+import io.openkit.facebook.LoggingBehavior;
+import io.openkit.facebook.Settings;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -51,7 +51,7 @@ import java.util.concurrent.atomic.AtomicLong;
 // we only have to ensure that there is at most one trim() process deleting files at any given time.
 
 /**
- * com.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
+ * io.openkit.facebook.internal is solely for the use of other packages within the Facebook SDK for Android. Use of
  * any of the classes in this package is unsupported, and they may be modified or removed without warning at
  * any time.
  */

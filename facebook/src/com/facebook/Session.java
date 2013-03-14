@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.app.Activity;
 import android.content.*;
@@ -23,9 +23,9 @@ import android.os.*;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
-import com.facebook.internal.SessionAuthorizationType;
-import com.facebook.internal.Utility;
-import com.facebook.internal.Validate;
+import io.openkit.facebook.internal.SessionAuthorizationType;
+import io.openkit.facebook.internal.Utility;
+import io.openkit.facebook.internal.Validate;
 
 import java.io.*;
 import java.lang.ref.WeakReference;
@@ -68,49 +68,49 @@ public class Session implements Serializable {
      * web view error code is stored in the Bundle returned from
      * {@link #getAuthorizationBundle getAuthorizationBundle} under this key.
      */
-    public static final String WEB_VIEW_ERROR_CODE_KEY = "com.facebook.sdk.WebViewErrorCode";
+    public static final String WEB_VIEW_ERROR_CODE_KEY = "io.openkit.facebook.sdk.WebViewErrorCode";
 
     /**
      * If Session authorization fails and provides a failing url, the failing
      * url is stored in the Bundle returned from {@link #getAuthorizationBundle
      * getAuthorizationBundle} under this key.
      */
-    public static final String WEB_VIEW_FAILING_URL_KEY = "com.facebook.sdk.FailingUrl";
+    public static final String WEB_VIEW_FAILING_URL_KEY = "io.openkit.facebook.sdk.FailingUrl";
 
     /**
      * The action used to indicate that the active session has been set. This should
      * be used as an action in an IntentFilter and BroadcastReceiver registered with
      * the {@link android.support.v4.content.LocalBroadcastManager}.
      */
-    public static final String ACTION_ACTIVE_SESSION_SET = "com.facebook.sdk.ACTIVE_SESSION_SET";
+    public static final String ACTION_ACTIVE_SESSION_SET = "io.openkit.facebook.sdk.ACTIVE_SESSION_SET";
 
     /**
      * The action used to indicate that the active session has been set to null. This should
      * be used as an action in an IntentFilter and BroadcastReceiver registered with
      * the {@link android.support.v4.content.LocalBroadcastManager}.
      */
-    public static final String ACTION_ACTIVE_SESSION_UNSET = "com.facebook.sdk.ACTIVE_SESSION_UNSET";
+    public static final String ACTION_ACTIVE_SESSION_UNSET = "io.openkit.facebook.sdk.ACTIVE_SESSION_UNSET";
 
     /**
      * The action used to indicate that the active session has been opened. This should
      * be used as an action in an IntentFilter and BroadcastReceiver registered with
      * the {@link android.support.v4.content.LocalBroadcastManager}.
      */
-    public static final String ACTION_ACTIVE_SESSION_OPENED = "com.facebook.sdk.ACTIVE_SESSION_OPENED";
+    public static final String ACTION_ACTIVE_SESSION_OPENED = "io.openkit.facebook.sdk.ACTIVE_SESSION_OPENED";
 
     /**
      * The action used to indicate that the active session has been closed. This should
      * be used as an action in an IntentFilter and BroadcastReceiver registered with
      * the {@link android.support.v4.content.LocalBroadcastManager}.
      */
-    public static final String ACTION_ACTIVE_SESSION_CLOSED = "com.facebook.sdk.ACTIVE_SESSION_CLOSED";
+    public static final String ACTION_ACTIVE_SESSION_CLOSED = "io.openkit.facebook.sdk.ACTIVE_SESSION_CLOSED";
 
     /**
      * Session takes application id as a constructor parameter. If this is null,
      * Session will attempt to load the application id from
      * application/meta-data using this String as the key.
      */
-    public static final String APPLICATION_ID_PROPERTY = "com.facebook.sdk.ApplicationId";
+    public static final String APPLICATION_ID_PROPERTY = "io.openkit.facebook.sdk.ApplicationId";
 
     private static final Object STATIC_LOCK = new Object();
     private static Session activeSession;
@@ -121,8 +121,8 @@ public class Session implements Serializable {
     // day
     private static final int TOKEN_EXTEND_RETRY_SECONDS = 60 * 60; // 1 hour
 
-    private static final String SESSION_BUNDLE_SAVE_KEY = "com.facebook.sdk.Session.saveSessionKey";
-    private static final String AUTH_BUNDLE_SAVE_KEY = "com.facebook.sdk.Session.authBundleKey";
+    private static final String SESSION_BUNDLE_SAVE_KEY = "io.openkit.facebook.sdk.Session.saveSessionKey";
+    private static final String AUTH_BUNDLE_SAVE_KEY = "io.openkit.facebook.sdk.Session.authBundleKey";
     private static final String PUBLISH_PERMISSION_PREFIX = "publish";
     private static final String MANAGE_PERMISSION_PREFIX = "manage";
 

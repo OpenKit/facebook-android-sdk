@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.Manifest;
 import android.app.Activity;
@@ -25,14 +25,14 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.webkit.CookieSyncManager;
-import com.facebook.android.R;
-import com.facebook.internal.ServerProtocol;
-import com.facebook.internal.Utility;
-import com.facebook.model.GraphMultiResult;
-import com.facebook.model.GraphObject;
-import com.facebook.model.GraphObjectList;
-import com.facebook.model.GraphUser;
-import com.facebook.widget.WebDialog;
+import io.openkit.facebook.android.R;
+import io.openkit.facebook.internal.ServerProtocol;
+import io.openkit.facebook.internal.Utility;
+import io.openkit.facebook.model.GraphMultiResult;
+import io.openkit.facebook.model.GraphObject;
+import io.openkit.facebook.model.GraphObjectList;
+import io.openkit.facebook.model.GraphUser;
+import io.openkit.facebook.widget.WebDialog;
 
 import java.io.Serializable;
 import java.util.ArrayList;

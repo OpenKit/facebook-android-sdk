@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.facebook;
+package io.openkit.facebook;
 
 import android.content.Context;
-import com.facebook.internal.*;
-import com.facebook.model.GraphObject;
-import com.facebook.model.GraphObjectList;
+import io.openkit.facebook.internal.*;
+import io.openkit.facebook.model.GraphObject;
+import io.openkit.facebook.model.GraphObjectList;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

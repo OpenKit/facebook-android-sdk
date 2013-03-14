@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.facebook.widget;
+package io.openkit.facebook.widget;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -29,12 +29,12 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import com.facebook.*;
-import com.facebook.android.R;
-import com.facebook.model.GraphUser;
-import com.facebook.internal.SessionAuthorizationType;
-import com.facebook.internal.SessionTracker;
-import com.facebook.internal.Utility;
+import io.openkit.facebook.*;
+import io.openkit.facebook.android.R;
+import io.openkit.facebook.model.GraphUser;
+import io.openkit.facebook.internal.SessionAuthorizationType;
+import io.openkit.facebook.internal.SessionTracker;
+import io.openkit.facebook.internal.Utility;
 
 import java.util.Collections;
 import java.util.List;
@@ -46,9 +46,9 @@ import java.util.List;
  * This control will create and use the active session upon construction
  * if it has the available data (if the app ID is specified in the manifest).
  * It will also open the active session if it does not require user interaction
- * (i.e. if the session is in the {@link com.facebook.SessionState#CREATED_TOKEN_LOADED} state.
+ * (i.e. if the session is in the {@link io.openkit.facebook.SessionState#CREATED_TOKEN_LOADED} state.
  * Developers can override the use of the active session by calling
- * the {@link #setSession(com.facebook.Session)} method.
+ * the {@link #setSession(io.openkit.facebook.Session)} method.
  */
 public class LoginButton extends Button {
 
