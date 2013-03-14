@@ -185,7 +185,9 @@ public class WebDialog extends Dialog {
 
         spinner = new ProgressDialog(getContext());
         spinner.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        spinner.setMessage(getContext().getString(R.string.com_facebook_loading));
+        int stringID = getContext().getResources().getIdentifier("com_facebook_loading", "string", getContext().getPackageName());
+        spinner.setMessage(getContext().getString(stringID));
+        //spinner.setMessage(getContext().getString(R.string.com_facebook_loading));
         spinner.setOnCancelListener(new OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialogInterface) {
@@ -252,7 +254,10 @@ public class WebDialog extends Dialog {
                 WebDialog.this.dismiss();
             }
         });
-        Drawable crossDrawable = getContext().getResources().getDrawable(R.drawable.com_facebook_close);
+        
+        int drawableID = getContext().getResources().getIdentifier("com_facebook_close", "drawable", getContext().getPackageName());
+        Drawable crossDrawable = getContext().getResources().getDrawable(drawableID);
+        //Drawable crossDrawable = getContext().getResources().getDrawable(R.drawable.com_facebook_close);
         crossImageView.setImageDrawable(crossDrawable);
         /* 'x' should not be visible while webview is loading
          * make it visible only after webview has fully loaded
