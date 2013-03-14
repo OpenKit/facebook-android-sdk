@@ -110,7 +110,7 @@ public class Session implements Serializable {
      * Session will attempt to load the application id from
      * application/meta-data using this String as the key.
      */
-    public static final String APPLICATION_ID_PROPERTY = "io.openkit.facebook.sdk.ApplicationId";
+    public static final String APPLICATION_ID_PROPERTY = "com.facebook.sdk.ApplicationId";
 
     private static final Object STATIC_LOCK = new Object();
     private static Session activeSession;
