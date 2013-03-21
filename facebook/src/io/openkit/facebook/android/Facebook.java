@@ -68,7 +68,7 @@ public class Facebook {
 
     @Deprecated
     public static final Uri ATTRIBUTION_ID_CONTENT_URI =
-        Uri.parse("content://io.openkit.facebook.katana.provider.AttributionIdProvider");
+        Uri.parse("content://com.facebook.katana.provider.AttributionIdProvider");
     @Deprecated
     public static final String ATTRIBUTION_ID_COLUMN_NAME = "aid";
 
@@ -458,7 +458,7 @@ public class Facebook {
         checkUserSession("extendAccessToken");
         Intent intent = new Intent();
 
-        intent.setClassName("io.openkit.facebook.katana", "io.openkit.facebook.katana.platform.TokenRefreshService");
+        intent.setClassName("com.facebook.katana", "com.facebook.katana.platform.TokenRefreshService");
 
         // Verify that the application whose package name is
         // io.openkit.facebook.katana

@@ -26,7 +26,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.webkit.CookieSyncManager;
-import io.openkit.facebook.android.R;
 import io.openkit.facebook.helpers.ResourceHelper;
 import io.openkit.facebook.internal.ServerProtocol;
 import io.openkit.facebook.internal.Utility;
