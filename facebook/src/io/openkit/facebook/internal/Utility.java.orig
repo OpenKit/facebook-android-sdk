@@ -26,9 +26,15 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
-import io.openkit.facebook.*;
+<<<<<<< HEAD
+import io.openkit.facebook.FacebookException;
+import io.openkit.facebook.Session;
 import io.openkit.facebook.android.BuildConfig;
-import io.openkit.facebook.model.GraphObject;
+=======
+import com.facebook.*;
+import com.facebook.android.BuildConfig;
+import com.facebook.model.GraphObject;
+>>>>>>> upstream/master
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
