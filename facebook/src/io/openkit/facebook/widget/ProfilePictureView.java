@@ -29,7 +29,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import io.openkit.facebook.FacebookException;
 import io.openkit.facebook.LoggingBehavior;
-import io.openkit.facebook.helpers.StyleableHelper;
 import io.openkit.facebook.internal.Logger;
 import io.openkit.facebook.internal.Utility;
 
