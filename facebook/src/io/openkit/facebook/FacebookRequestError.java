@@ -16,10 +16,12 @@
 
 package io.openkit.facebook;
 
-import io.openkit.facebook.android.R;
+import io.openkit.facebook.helpers.ResourceHelper;
 import io.openkit.facebook.internal.Utility;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import android.content.Context;
 
 import java.net.HttpURLConnection;
 
@@ -106,7 +108,7 @@ public final class FacebookRequestError {
     private FacebookRequestError(int requestStatusCode, int errorCode,
             int subErrorCode, String errorType, String errorMessage, JSONObject requestResultBody,
             JSONObject requestResult, Object batchRequestResult, HttpURLConnection connection,
-            FacebookException exception) {
+            FacebookException exception, Context ctx) {
         this.requestStatusCode = requestStatusCode;
         this.errorCode = errorCode;
         this.subErrorCode = subErrorCode;
@@ -140,21 +142,27 @@ public final class FacebookRequestError {
                 errorCategory = Category.THROTTLING;
             } else if (errorCode == EC_PERMISSION_DENIED || EC_RANGE_PERMISSION.contains(errorCode)) {
                 errorCategory = Category.PERMISSION;
-                messageId = R.string.com_facebook_requesterror_permissions;
+                //messageId = R.string.com_facebook_requesterror_permissions;
+                messageId = ResourceHelper.getStringResourceID(ctx, "com_facebook_requesterror_permissions");
             } else if (errorCode == EC_INVALID_SESSION || errorCode == EC_INVALID_TOKEN) {
                 if (subErrorCode == EC_USER_CHECKPOINTED || subErrorCode == EC_UNCONFIRMED_USER) {
                     errorCategory = Category.AUTHENTICATION_RETRY;
-                    messageId = R.string.com_facebook_requesterror_web_login;
+                    //messageId = R.string.com_facebook_requesterror_web_login;
+                    messageId = ResourceHelper.getStringResourceID(ctx, "com_facebook_requesterror_web_login");
                     shouldNotify = true;
                 } else {
                     errorCategory = Category.AUTHENTICATION_REOPEN_SESSION;
 
                     if (subErrorCode == EC_APP_NOT_INSTALLED) {
-                        messageId = R.string.com_facebook_requesterror_relogin;
+                        //messageId = R.string.com_facebook_requesterror_relogin;
+                        messageId = ResourceHelper.getStringResourceID(ctx, "com_facebook_requesterror_relogin");
+
                     } else if (subErrorCode == EC_PASSWORD_CHANGED) {
-                        messageId = R.string.com_facebook_requesterror_password_changed;
+                        //messageId = R.string.com_facebook_requesterror_password_changed;
+                        messageId = ResourceHelper.getStringResourceID(ctx, "com_facebook_requesterror_password_changed");
                     } else {
-                        messageId = R.string.com_facebook_requesterror_reconnect;
+                        //messageId = R.string.com_facebook_requesterror_reconnect;
+                        messageId = ResourceHelper.getStringResourceID(ctx, "com_facebook_requesterror_reconnect");
                     }
                 }
             }
@@ -177,16 +185,16 @@ public final class FacebookRequestError {
 
     private FacebookRequestError(int requestStatusCode, int errorCode,
             int subErrorCode, String errorType, String errorMessage, JSONObject requestResultBody,
-            JSONObject requestResult, Object batchRequestResult, HttpURLConnection connection) {
+            JSONObject requestResult, Object batchRequestResult, HttpURLConnection connection, Context ctx) {
         this(requestStatusCode, errorCode, subErrorCode, errorType, errorMessage,
-                requestResultBody, requestResult, batchRequestResult, connection, null);
+                requestResultBody, requestResult, batchRequestResult, connection, null, ctx);
     }
 
-    FacebookRequestError(HttpURLConnection connection, Exception exception) {
+    FacebookRequestError(HttpURLConnection connection, Exception exception, Context ctx) {
         this(INVALID_HTTP_STATUS_CODE, INVALID_ERROR_CODE, INVALID_ERROR_CODE,
                 null, null, null, null, null, connection,
                 (exception instanceof FacebookException) ?
-                        (FacebookException) exception : new FacebookException(exception));
+                        (FacebookException) exception : new FacebookException(exception), ctx);
     }
 
     public FacebookRequestError(int errorCode, String errorType, String errorMessage) {
@@ -344,7 +352,7 @@ public final class FacebookRequestError {
     }
 
     static FacebookRequestError checkResponseAndCreateError(JSONObject singleResult,
-            Object batchResult, HttpURLConnection connection) {
+            Object batchResult, HttpURLConnection connection, Context ctx) {
         try {
             if (singleResult.has(CODE_KEY)) {
                 int responseCode = singleResult.getInt(CODE_KEY);
@@ -381,7 +389,7 @@ public final class FacebookRequestError {
 
                     if (hasError) {
                         return new FacebookRequestError(responseCode, errorCode, errorSubCode,
-                                errorType, errorMessage, jsonBody, singleResult, batchResult, connection);
+                                errorType, errorMessage, jsonBody, singleResult, batchResult, connection, ctx);
                     }
                 }
 
@@ -392,7 +400,7 @@ public final class FacebookRequestError {
                             singleResult.has(BODY_KEY) ?
                                     (JSONObject) Utility.getStringPropertyAsJSON(
                                             singleResult, BODY_KEY, Response.NON_JSON_RESPONSE_PROPERTY) : null,
-                            singleResult, batchResult, connection);
+                            singleResult, batchResult, connection, ctx);
                 }
             }
         } catch (JSONException e) {

@@ -16,6 +16,7 @@
 
 package io.openkit.facebook;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.location.Location;
 import android.net.Uri;
@@ -1019,14 +1020,14 @@ public class Request {
      * @throws IllegalArgumentException if the passed in RequestBatch is empty
      * @throws NullPointerException if the passed in RequestBatch or any of its contents are null
      */
-    public static List<Response> executeBatchAndWait(RequestBatch requests) {
+    public static List<Response> executeBatchAndWait(RequestBatch requests, Context ctx) {
         Validate.notEmptyAndContainsNoNulls(requests, "requests");
 
         HttpURLConnection connection = null;
         try {
             connection = toHttpConnection(requests);
         } catch (Exception ex) {
-            List<Response> responses = Response.constructErrorResponses(requests.getRequests(), null, new FacebookException(ex));
+            List<Response> responses = Response.constructErrorResponses(requests.getRequests(), null, new FacebookException(ex), ctx);
             runCallbacks(requests, responses);
             return responses;
         }
@@ -1131,8 +1132,8 @@ public class Request {
      * @throws FacebookException
      *            If there was an error in the protocol used to communicate with the service
      */
-    public static List<Response> executeConnectionAndWait(HttpURLConnection connection, RequestBatch requests) {
-        List<Response> responses = Response.fromHttpConnection(connection, requests);
+    public static List<Response> executeConnectionAndWait(HttpURLConnection connection, RequestBatch requests, Context ctx) {
+        List<Response> responses = Response.fromHttpConnection(connection, requests, ctx);
 
         Utility.disconnectQuietly(connection);
 
