@@ -408,6 +408,8 @@ public class Response {
 
             FacebookRequestError error =
                     FacebookRequestError.checkResponseAndCreateError(jsonObject, originalResult, connection);
+
+          
             if (error != null) {
                 if (error.getErrorCode() == INVALID_SESSION_FACEBOOK_ERROR_CODE) {
                     Session session = request.getSession();
