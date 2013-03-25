@@ -16,7 +16,6 @@
 
 package io.openkit.facebook;
 
-import io.openkit.facebook.android.R;
 import io.openkit.facebook.internal.Utility;
 import org.json.JSONException;
 import org.json.JSONObject;
