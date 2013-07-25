@@ -5,7 +5,7 @@ import android.content.Context;
 import android.util.Log;
 
 public class StyleableHelper {
-	
+
 	/*********************************************************************************
 	*   Returns the resource-IDs for all attributes specified in the
 	*   given <declare-styleable>-resource tag as an int array.
@@ -20,8 +20,10 @@ public class StyleableHelper {
 	{
 	    try
 	    {
+	    	Log.d("FBMOD", "Trying reflection to get resource class R.styleable");
+
 	        //use reflection to access the resource class
-	        Field[] fields2 = Class.forName( context.getPackageName() + ".R$styleable" ).getFields();
+	        Field[] fields2 = Class.forName( context.getPackageName() + ".R.styleable" ).getFields();
 
 	        //browse all fields
 	        for ( Field f : fields2 )
@@ -39,18 +41,28 @@ public class StyleableHelper {
 	    catch ( Throwable t )
 	    {
 	    	Log.e("FBMOD","Exception thrown while trying to find resource: " + t);
-	    	Log.e("FBMOD","Tried to load class name: " + context.getPackageName() + ".R$styleable");
+	    	Log.e("FBMOD","Tried to load class name: " + context.getPackageName() + ".R.styleable");
 	    }
-	    
+
 	    Log.e("FBMOD","Could not load resource properly!");
-	    
+
 	    return null;
 	}
-	
+
 	public static Boolean isRClassDefined(Context context)
 	{
 		try {
 			Class.forName(context.getPackageName() + ".R" );
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public static Boolean isRStyleableClassDefined(Context context)
+	{
+		try {
+			Class.forName(context.getPackageName() + ".R.styleable" );
 			return true;
 		} catch (Exception e) {
 			return false;
